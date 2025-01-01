@@ -10,3 +10,5 @@ NEXTAUTH_SECRET="your_secretphrase"
 
 make sure to install the node module  
 npm install node-modules
+
+//removed the .next from github and added to .env
