@@ -12,17 +12,18 @@ const userSchema = z
       .string()
       .min(1, 'Password is required')
       .min(8, 'Password must have than 8 characters'),
-    confirmPassword: z.string().min(1, 'Password confirmation is required'),
-  })
-
-
+})
+//my entire signup page was not working becasue the line below was in the userSchema. idk why???
+// confirmPassword: z.string().min(1, 'Password confirmation is required'),
 
 export async function POST(req: Request){
     try {
         //post api stuff
         const body = await req.json();
+
         const {email, username, password} = userSchema.parse(body);
 
+       
         //check if email already exists
         const existingUserbyEmail = await db.user.findUnique({
             where: {email: email}

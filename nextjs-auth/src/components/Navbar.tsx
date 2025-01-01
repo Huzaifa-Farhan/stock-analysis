@@ -14,9 +14,6 @@ const Navbar = async () => {
         <Link href='/'>
           <HandMetal />
         </Link>
-        <Link className={buttonVariants()} href='/sign-in'>
-          Sign in
-        </Link>
         {session?.user ? (<UserAccountnav />) : (
           <Link className={buttonVariants()} href='/sign-in'>Sign In</Link>
         )}
@@ -25,4 +22,6 @@ const Navbar = async () => {
   );
 };
 
-export default Navbar;
+export default Navbar
+
+//         <Link className={buttonVariants()} href='/sign-in'>Sign in</Link>

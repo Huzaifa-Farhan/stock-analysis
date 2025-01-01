@@ -1,10 +1,11 @@
 import Navbar from '@/components/Navbar';
+import Provider from '@/components/Provider';
 import { Toaster } from '@/components/ui/toaster';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import { useToast } from "@/components/hooks/use-toast"
-import { Provider } from '@radix-ui/react-toast';
+// import { useToast } from "@/components/hooks/use-toast"
+
 
 
 const inter = Inter({ subsets: ['latin'] });
@@ -22,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
+
+        {/* might have to change this to sessionprovider */}
         <Provider>
         <main className='h-screen flex flex-col justify-center items-center'>
           <Navbar />
