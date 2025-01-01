@@ -1,3 +1,4 @@
 nextjs-auth/node_modules/
 nextjs-auth/.next/
 .env
+.env.local
